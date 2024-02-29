@@ -7,7 +7,7 @@ class Member:
         self.password = self.hash_password(password)
 
     def hash_password(self, password):
-        # SHA-256 해싱 알고리즘을 사용하여 비밀번호 해싱
+        # SHA-256 해싱 알고리즘 사용하여 비밀번호 해싱
         hasher = hashlib.sha256()
         hasher.update(password.encode('utf-8'))
         return hasher.hexdigest()
